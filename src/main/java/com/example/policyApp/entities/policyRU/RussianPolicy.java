@@ -1,5 +1,4 @@
-package com.example.policyApp.entity.policyRU;
-// TODO 1 владелец машины
+package com.example.policyApp.entities.policyRU;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -19,6 +18,8 @@ public class RussianPolicy {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    private String policyNumber;
 
     private int termOfInsurance;
     @JsonFormat(pattern = "yyyy-MM-dd-hh-mm")

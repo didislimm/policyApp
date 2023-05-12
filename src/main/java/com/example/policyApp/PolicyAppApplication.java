@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@EntityScan(basePackages = "com.example.policyApp.entity")
+@EntityScan(basePackages = "com.example.policyApp.entities")
 public class PolicyAppApplication {
 
 	public static void main(String[] args) {

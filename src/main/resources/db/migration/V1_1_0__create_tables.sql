@@ -12,9 +12,17 @@ CREATE TABLE russian_policy_seq
 INSERT INTO russian_policy_seq
 VALUES (1);
 
+CREATE TABLE _user_seq
+(
+    next_val BIGINT
+) ENGINE=InnoDB;
+INSERT INTO _user_seq
+VALUES (1);
+
 CREATE TABLE belarus_policy
 (
     id                        BIGINT NOT NULL,
+    policy_number             VARCHAR(255),
     term_of_insurance         INT,
     start_insurance           DATETIME,
     end_insurance             DATE,
@@ -48,6 +56,7 @@ CREATE TABLE belarus_policy
 CREATE TABLE russian_policy
 (
     id                     BIGINT NOT NULL,
+    policy_number          VARCHAR(255),
     term_of_insurance      INT,
     start_insurance        DATETIME,
     end_insurance          DATE,
@@ -66,3 +75,12 @@ CREATE TABLE russian_policy
     special_marks          TEXT,
     agreement_date         DATE
 ) ENGINE=InnoDB;
+
+CREATE TABLE _user
+(
+    id        INT PRIMARY KEY AUTO_INCREMENT,
+    username     VARCHAR(255),
+    password  VARCHAR(255),
+    role      VARCHAR(255)
+) ENGINE=InnoDB;
+

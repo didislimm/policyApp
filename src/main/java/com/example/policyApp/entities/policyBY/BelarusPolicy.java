@@ -1,4 +1,4 @@
-package com.example.policyApp.entity.policyBY;
+package com.example.policyApp.entities.policyBY;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Entity;
@@ -22,6 +22,8 @@ public class BelarusPolicy {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    private String policyNumber;
 
     private int termOfInsurance;
 
